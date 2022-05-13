@@ -12,7 +12,21 @@ const Main = () => {
     localStorage.setItem("cards", JSON.stringify(cards));
   }, [cards]);
 
-  return <div></div>;
+  const addNewCard = () => {
+    const newCard = {
+      id: uuidv4(),
+      cardNum: Math.floor(Math.random() * 1000) + 1,
+    };
+    setCardNum(newCard.cardNum);
+    setId(newCard.id);
+    setCards((items) => [...items, newCard]);
+  };
+
+  return (
+    <div>
+      <Header addNewCard={addNewCard} />
+    </div>
+  );
 };
 
 export default Main;
