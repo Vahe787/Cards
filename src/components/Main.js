@@ -22,9 +22,15 @@ const Main = () => {
     setCards((items) => [...items, newCard]);
   };
 
+  const sortCards = () => {
+    const newCards = [...cards];
+    newCards.sort((a, b) => a.cardNum - b.cardNum);
+    setCards(newCards);
+  };
+
   return (
     <div>
-      <Header addNewCard={addNewCard} />
+      <Header addNewCard={addNewCard} sortCards={sortCards} />
     </div>
   );
 };
