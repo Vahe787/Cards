@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Footer from "./menu/Footer";
 import Instructions from "./menu/Instructions";
 
 const Main = () => {
@@ -40,6 +41,7 @@ const Main = () => {
         <Content deleteItem={deleteItem} cards={cards} />
         <Instructions />
       </div>
+      <Footer />
     </div>
   );
 };
