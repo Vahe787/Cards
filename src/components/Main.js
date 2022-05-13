@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import Footer from "./menu/Footer";
-import Instructions from "./menu/Instructions";
+import { Header, Content, Instructions, Footer } from "./menu";
 
 const Main = () => {
   const [cardNum, setCardNum] = useState(null);
