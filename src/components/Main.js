@@ -31,6 +31,9 @@ const Main = () => {
   return (
     <div>
       <Header addNewCard={addNewCard} sortCards={sortCards} />
+      <div className="flex">
+        <Content deleteItem={deleteItem} cards={cards} />
+      </div>
     </div>
   );
 };
