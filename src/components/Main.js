@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Instructions from "./menu/Instructions";
 
 const Main = () => {
   const [cardNum, setCardNum] = useState(null);
@@ -37,6 +38,7 @@ const Main = () => {
       <Header addNewCard={addNewCard} sortCards={sortCards} />
       <div className="flex">
         <Content deleteItem={deleteItem} cards={cards} />
+        <Instructions />
       </div>
     </div>
   );
