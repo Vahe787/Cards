@@ -28,6 +28,10 @@ const Main = () => {
     setCards(newCards);
   };
 
+  const deleteItem = (id) => {
+    setCards(cards.filter((item) => item.id !== id));
+  };
+
   return (
     <div>
       <Header addNewCard={addNewCard} sortCards={sortCards} />
